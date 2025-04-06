@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script src="./js/scripts.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link
+			rel="shortcut icon"
+			href="./images/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="character-counter-header">
+			<div class="header-info">
+				<img class="logo" src="./images/logo-dark-theme.svg" alt="logo" />
+				<div class="theme-container">
+					<img
+						class="light-theme"
+						src="./images/icon-sun.svg"
+						alt="light theme"
+					/>
+				</div>
+			</div>
+		</header>
+		<main class="character-counter-main">
+			<section class="main-container">
+				<h1 class="title">Analyze your text in real-time.</h1>
+				<div class="analyzer-container">
+					<div class="typing-container">
+						<input
+							type="text"
+							class="typing-input"
+							id="typing-input"
+							placeholder="Start typing here… (or paste your text)"
+						/>
+					</div>
+					<div class="checkbox-container">
+						<input
+							class="checkbox"
+							type="checkbox"
+							name="exclude-checkbox"
+							id="exclude-checkbox"
+						/>
+						<p class="text">Exclude Spaces</p>
+					</div>
+					<div class="reading-time-container">
+						<p class="text">Approx. reading time:</p>
+						<span class="text" id="reading-time">0 minute</span>
+					</div>
+				</div>
+			</section>
+			<section class="stats-container">
+				<article class="stats stats-purple">
+					<span class="text-stats-bold" id="character-counter">00</span>
+					<span class="text-stats">Total characters</span>
+				</article>
+				<article class="stats stats-yellow">
+					<span class="text-stats-bold" id="word-counter">00</span>
+					<span class="text-stats">Word Count</span>
+				</article>
+				<article class="stats stats-orange">
+					<span class="text-stats-bold" id="sentence-counter">00</span>
+					<span class="text-stats">Sentence Count</span>
+				</article>
+			</section>
+		</main>
+		<script src="./js/scripts.js"></script>
+	</body>
 </html>
