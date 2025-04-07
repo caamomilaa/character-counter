@@ -11,12 +11,12 @@ const readingTimeElement = document.getElementById('reading-time');
 //Total sentence > por punto final
 
 const countSpaces = text => {
-	let spaces = 0;
-	for (let i = 0; i < typingInputElement.length; i++) {
-		if (typingInputElement.charAt(i) === ' ') {
-			spaces++;
-		}
-	}
-	console.log(`tiene ${spaces} espacios`);
+  let spaces = 0;
+  for (let i = 0; i < typingInputElement.length; i++) {
+    if (typingInputElement.length === ' ') {
+      spaces++;
+    }
+  }
+  console.log(`tiene ${spaces} espacios`);
 };
 typingInputElement.addEventListener('input', countSpaces);
