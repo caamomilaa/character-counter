@@ -10,13 +10,27 @@ const readingTimeElement = document.getElementById('reading-time');
 //Total word > por espacios
 //Total sentence > por punto final
 
-const countSpaces = text => {
-  let spaces = 0;
-  for (let i = 0; i < typingInputElement.length; i++) {
-    if (typingInputElement.length === ' ') {
-      spaces++;
-    }
+// .split
+
+// const countCharacters = () => {
+//   let characters = 0;
+//   for (let i = 0; i < typingInputElement.length; i++) {
+//     if (typingInputElement.length === ' ') {
+//       characters++;
+//     }
+//   }
+//   characterCounterElement.value += characters;
+//   console.log(characters);
+// };
+// typingInputElement.addEventListener('input', countCharacters);
+
+const countCharacters = () => {
+  const hola = typingInputElement.value;
+  let totalCharacters = 0;
+
+  for (const character of hola) {
+    hola += character;
   }
-  console.log(`tiene ${spaces} espacios`);
+  console.log(totalCharacters);
 };
-typingInputElement.addEventListener('input', countSpaces);
+countCharacters();
